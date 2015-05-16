@@ -1,4 +1,4 @@
-pub fn bubble_sort(arr:&mut [i32]) {
+pub fn bubble_sort<T:Ord>(arr:&mut [T]) {
     let mut length = arr.len();
     while length > 1 {
         let mut i = 1;
