@@ -1,7 +1,6 @@
-use std::fmt::Display;
 // 堆排序,首先构造最大堆, 然后不断地将堆首元素(最大值)和堆尾元素交换, 然后递减
 // 堆的大小,再次构造最大堆
-pub fn heap_sort<T:Ord + Display>(arr:&mut [T]) {
+pub fn heap_sort<T:Ord>(arr:&mut [T]) {
     build_max_heap(arr);
     for i in (1..arr.len()).rev() {
         arr.swap(0, i);

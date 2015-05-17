@@ -2,3 +2,6 @@
 name = "rust_algorithm"
 version = "0.0.1"
 authors = ["BY <bellskinling@gmail.com"]
+
+[dependencies]
+num = "*"
