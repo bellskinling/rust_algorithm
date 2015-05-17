@@ -17,8 +17,8 @@ fn _merge_sort<T:Ord + Clone + Copy + GetMax>(arr:&mut [T], left:usize, right:us
 // 将[left, middle)和 [middle, right)按从小到大的顺序合并为一个数组, 注意区间是
 // 左闭右开
 fn merge<T:Ord + Clone + Copy + GetMax>(arr:&mut [T], left:usize, middle:usize, right:usize) {
-    let mut arr1:Vec<T> = arr[left..middle].to_vec();
-    let mut arr2:Vec<T> = arr[middle..right].to_vec();
+    let mut arr1 = arr[left..middle].to_vec();
+    let mut arr2 = arr[middle..right].to_vec();
     // 在arr1和arr2的末尾添加一个哨兵值,其值大小为T::max_value(),
     // 这样在循环中就不需要再对数组的边界条件进行判断了
     arr1.push(T::max_value());
